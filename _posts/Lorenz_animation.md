@@ -1,3 +1,17 @@
+---
+title: 'Animating the Lorentz Attractor with Python'
+date: 2021-01-01
+permalink: /posts/Lorenz_animation
+tags:
+  - Chaos Theory
+  - Statystical mechanics
+  - Physics
+  - Python Animation
+  - Butterfly Effect
+---
+
+
+
 # Animating the Lorenz Attractor with Python
 
 Edward Lorenz, the father of [chaos theory](https://www.mdpi.com/2079-8954/4/4/37/htm), once described chaos as “when the present determines the future, but the approximate present does not approximately determine the future.”
