@@ -1,6 +1,6 @@
 ---
 title: "A Space-Time symmetrical extension of quantum mechanics"
-excerpt: "M.Sc. Research - A Space-Time symmetrical extension of quantum mechanics<br/><img src='/images/time.png'  height='200' width='100'>"
+excerpt: "M.Sc. Research - A Space-Time symmetrical extension of quantum mechanics<br/><img src='/images/time.png'  height='400' width='300'>"
 collection: portfolio
 ---
 
