@@ -13,7 +13,7 @@ location: "Recife, Brazil"
 
 Description 
 ======
-The Physics for Computer Science discipline seeks to raise and discuss the main topics of classical physics that can be useful to a computer scientist.
+The Physics for Computer Science discipline seeks to raise and discuss the main topics of classical physics that can be useful to a computer scientist. I was responsible for helping the students in the exercises and giving reinforcement classes on the subjects covered in class.
 
 * **Bibliography:** 
   * Physics for Computer Science Students: With Emphasis on Atomic and Semiconductor Physics. Narciso García, A. C. Damask, Steven Schwarz. Spinger, 1998
