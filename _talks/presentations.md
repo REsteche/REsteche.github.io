@@ -16,3 +16,4 @@ Here I'll link my research related conference presentations
 
   * Fluidic interfaces: Energy and Curvature relationships through Euler's elastic - Analytical and Numerical development - *Presencial Undergrad presentation - Not-Recorded*
     * [Event publicity poster](https://www.facebook.com/dadfufpe/photos/2027476990910303)
+    * [Full pdf presentation](https://github.com/REsteche/REsteche.github.io/blob/master/images/Apresenta%C3%A7%C3%A3o_coloquio_jr.pdf)
