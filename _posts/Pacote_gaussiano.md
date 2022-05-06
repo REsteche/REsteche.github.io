@@ -1,3 +1,14 @@
+---
+title: 'symmetric spacetime distributions explained'
+date: 2021-01-01
+permalink: /posts/Pacote_gaussiano
+tags:
+  - Quantum mechanics
+  - Temporal distributions
+  - quantum foundations
+---
+
+
 # Numerical solving and plotting the evolution 'n spreading of gaussian wave packet in space-time symmetric quantum formalism
 
 Our intention now turns to proposing an analytical solution to equation (5.6) of Ricardo's thesys. This problem has already been analyzed in different ways, and it has been shown that for a free particle problem, there is a closed form for its solution as in [ref. session 2.4](https://repositorio.ufpe.br/bitstream/123456789/29706/1/DISSERTA%C3%87%C3%83O%20Ricardo%20Alexandre%20dos%20Santos%20Ximenes%20Filho.pdf). Now, let's show that for a wide range of physical systems, which are under the action of a potential independent of time, it is possible to use a similar technique to obtain a general solution. Recalling that:
