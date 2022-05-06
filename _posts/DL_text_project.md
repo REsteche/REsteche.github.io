@@ -1,3 +1,17 @@
+---
+title: 'My first Deep Learning with text expertise'
+date: 2021-01-01
+permalink: /posts/DL_text_project
+tags:
+  - Deep Learning
+  - Data analysys
+  - Machine Learning
+  - Textual analisys
+---
+
+
+
+
 # Full Stack Deep Learning project 
 
 ## introduction 
