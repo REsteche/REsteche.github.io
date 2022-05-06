@@ -1,3 +1,15 @@
+---
+title: 'O som do Hidrogênio'
+date: 2021-01-01
+permalink: /posts/Som_hidrogênio
+tags:
+  - Física Moderna
+  - Música
+  - Física atomica
+  - Estrutura da Matéria
+---
+
+
 # O som do átomo de hidrogênio
 
 Inspirado pelo vídeo do [minute physics](https://www.youtube.com/watch?v=qyi5SvPlMXc) decidi fazer esse mini projeto para  mostrar como fazer projetos envolvendo faixas de som audíveis no próprio navegador, totalmente em python através do Jupyter Notebook.
