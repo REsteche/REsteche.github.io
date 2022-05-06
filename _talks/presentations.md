@@ -9,7 +9,7 @@ location: "Recife, Pernambuco"
 ---
 
 
-Here i'll link my research related conference presentations
+Here I'll link my research related conference presentations
 
   * A symmetric spacetime extension of quantum mechanics and the tunneling time problem *Online Master presentation - Recorded*
     * [Link to the video](https://youtu.be/X2jTDtR0kKk)
