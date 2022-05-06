@@ -1,3 +1,15 @@
+---
+title: 'Um pouco sobre Mecânica estatística'
+date: 2021-01-01
+permalink: /posts/Statistical_mechanics
+tags:
+  - Física
+  - Mecânica Estatística
+  - Pós-Graduação
+  - Modelo de Ising
+  - Andar do Bêbado
+---
+
 # Atividades Mecânica estatística  
 
 Compilado de atividades computacionais executadas durante a discipina de mecânica estatística ministradas pelo professor Paulo Campos.
