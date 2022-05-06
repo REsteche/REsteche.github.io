@@ -1,6 +1,6 @@
 ---
 title: "Fluid Interfaces: Curvature relations and Euler elastics"
-excerpt: "Undergraduate Research - Fluid Interfaces: Curvature relations and Euler elastics. (2016–2017) <br/><img src='/images/simulation.png' height="300" width="200">"
+excerpt: "Undergraduate Research - Fluid Interfaces: Curvature relations and Euler elastics. (2016–2017) <br/><img src='/images/simulation.png' height='300' width='200'>"
 collection: portfolio
 ---
 
