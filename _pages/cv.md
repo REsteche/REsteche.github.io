@@ -77,23 +77,4 @@ Scholarships and Awards
 Graduate Fellowship, CAPES (Coordenação de Aperfeiçoamento de Pessoal de Nível Superior) - (88887.623604/2021-00), Brazil May 2021–2023 .  
 ### PS.:
 For a more complete pdf version of my CV you can contact me at my professional email: ruben.esteche@ufpe.br . or Download it from [this repo](https://github.com/REsteche/master_works/blob/master/CV.pdf)
-<!--
-Publications
-======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
---> 
+
