@@ -1,0 +1,15 @@
+---
+layout: archive
+title: "Blog Posts"
+permalink: /posts/
+author_profile: true
+---
+
+{% include base_path %}
+
+A Personal page to publish academic related or personal projects blog posts and a variety of other notebooks on curiosities of 
+materials I am studying.
+
+{% for post in site.posts %}
+  {% include archive-single.html %}
+{% endfor %}
