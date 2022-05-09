@@ -1,3 +1,14 @@
+---
+title: 'A textual recognizer neural network'
+date: 2021-06-06
+permalink: /posts/notebooks/DLtextproject/
+tags:
+  - Machine Learning
+  - Deep Learning
+  - Python Neural Networks
+  - Textual Neural Network
+---
+
 # Full Stack Deep Learning project 
 
 ## introduction 
