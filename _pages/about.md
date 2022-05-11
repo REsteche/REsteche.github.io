@@ -9,9 +9,9 @@ redirect_from:
 ---
 
 
-Welcome to my personal academic site. My name is Ruben Esteche, I'm a bachelor in physics and currently doing a M.Sc in foundations of quantum mechanics. I am also a programming enthusiast, always interested in learning and sharing more. I’m currently working on temporal aspects, from a new arrival time distribution to tunneling time numerical modeling. I have also experience in causality relationships of events in quantum mechanics and a good understanding of data science and machine learning tools. 
+Welcome to my personal academic site. My name is Ruben Esteche, I'm a bachelor in physics and currently doing a M.Sc in foundations of quantum mechanics. I'm also a programming enthusiast, always interested in learning and sharing more. I’m currently working on temporal aspects of QM, from a new arrival time distribution to tunneling time numerical modeling. I also have experience in causality relationships of events in quantum mechanics and a good understanding of data science and machine learning tools. 
 
-I’m always looking to collaborate with other researchers, and expand my networking and knowledge, as well as learn as much as possible. Currently, I'm dedicating mainly in conducting my master's research, as well as spending a good part of my free time in various personal projects that are usually posted here in a blog format. You should [check them out!](https://resteche.github.io/REsteche_blog/)
+I’m always looking to collaborate with other researchers, and expand my networking and knowledge, as well as learn as much as possible. Currently, I'm dedicating in conducting my master's research, as well as spending a good part of my free time in various personal projects that are usually posted here in a blog format. You should [check them out!](https://resteche.github.io/REsteche_blog/)
 
 
 
