@@ -14,7 +14,7 @@ redirect_from:
 Education
 ======
 
-### M.S. Foundations of Quantum mechanics
+### M.Sc. Foundations of Quantum mechanics
 
 * January/2021 - Today
 * Federal University of Pernambuco, Recife, Brazil
