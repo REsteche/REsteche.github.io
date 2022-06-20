@@ -13,15 +13,6 @@ redirect_from:
 
 Education
 ======
-### Bachelor's Degree in Physics
-
-* January/2015 - December/2020
-* Federal University of Pernambuco, Recife, Brazil
-* GPA: 7.01/10.00
-
-__Work Title__: Fluid Interfaces: Curvature relations and Euler elastics.
-
-__Advisor__: Wilson Barros Junior
 
 ### M.S. Foundations of Quantum mechanics
 
@@ -33,20 +24,43 @@ __Work Theme__: Time in Quantum mechanics - Developing numerical distributions t
 
 __Advisor__: Eduardo Olimpio Dias
 
+### Post Graduation in Data Science 
+
+* July/2022 - Today
+* Descomplica Cursos Livres S.A., RJ, Rio de Janeiro.
+
+
+### Bachelor's Degree in Physics
+
+* January/2015 - December/2020
+* Federal University of Pernambuco, Recife, Brazil
+* GPA: 7.01/10.00
+
+__Work Title__: Fluid Interfaces: Curvature relations and Euler elastics.
+
+__Advisor__: Wilson Barros Junior
+
+
+
 
 Professional experience
 ======
- Spring 2018: Teaching Assistant
+
+ July 2022 - Present: Data Science and Machine Learning researcher
+ 
+  * DELL Lead - Fortaleza, Brazil
+  * Duties included: Responsible for mining textual data and creating data visualizations.
+  
+ April 2020 - Present: Researcher Fellowship of CAPES
+  * Federal University of Pernambuco
+  * Duties included: Conducting M.Sc.Research.
+  * Supervisor: Professor Eduardo Olimpio Dias
+
+ July 2018 - December 2018: Teaching Assistant
  
   * Federal University of Pernambuco
   * Duties included: reinforcement classes and exercises solutions for students.
   * Supervisor: Professor Fernando Luis de Araujo Machado 
-
-
- Summer 2020: Researcher Fellowship of CAPES
-  * Federal University of Pernambuco
-  * Duties included: Conducting M.Sc.Research.
-  * Supervisor: Professor Eduardo Olimpio Dias
   
 Programimg skills
 ======
@@ -57,7 +71,7 @@ __Programimg Languages__
 
 __Toolboxes and Libraries__
 
-* Python: Quadpy(+++), Pytorch(++) FuncAnimation(++), Tensorflow (+)  
+* Python: Quadpy(+++), Scikit-Learn(+++), SpaCy(++), Pytorch(++), FuncAnimation(++), Tensorflow (+)  
 * C/C++: OPENGL, Glfw
 
 __Other Softwares__
