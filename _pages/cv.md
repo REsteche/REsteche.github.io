@@ -49,7 +49,7 @@ Professional experience
  July 2022 - Present: Data Science and Machine Learning researcher
  
   * DELL Lead - Fortaleza, Brazil
-  * Duties included: Responsible for mining textual data and creating data visualizations.
+  * Duties included: Responsible for mining textual data, creating data visualizations and implementing natural language models in a DELL API.
   
  April 2020 - Present: Researcher Fellowship of CAPES
   * Federal University of Pernambuco
