@@ -82,13 +82,13 @@ analytics:
 author:
   name             : "Ruben Esteche Araujo"
   avatar           : "3x4.jpg"
-  bio              : "MSc student in quantum physics foundations at UFPE. Data Scientist at DELL Lead. Trying to learn more and share my own projects with other science enthusiasts"
+  bio              : ""
   location         : "Fortaleza-CE"
   employer         : "CAPES-fellowship "
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : #"http://yourfullgooglescholarurl.com"
   email            : rubenesteche@ufpe.br
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  researchgate     :  #example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
   codepen          :
