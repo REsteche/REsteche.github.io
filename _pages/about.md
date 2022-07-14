@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 
-Welcome to my personal academic site. My name is Ruben Esteche, I'm a bachelor in physics and currently doing a M.Sc in foundations of quantum mechanics, and working as a data scientist at DELL Lead. I’m currently researching on temporal aspects of QM, from a new arrival time distribution to tunneling time numerical modeling. I also have experience in causality relationships of events in quantum mechanics and a good understanding of data science and machine learning tools. 
+Welcome to my personal academic site. My name is Ruben Esteche, I'm a bachelor in physics and currently doing a M.Sc in foundations of quantum mechanics at Federal University of Pernambuco - Brazil, and working as a data scientist at DELL Lead. I’m currently researching on temporal aspects of QM, from a new arrival time distribution to tunneling time numerical modeling. I also have experience in causality relationships of events in quantum mechanics and a good understanding of data science and machine learning tools. 
 
 I’m always looking to collaborate with other researchers, and expand my networking and knowledge, as well as learn as much as possible. Currently, I'm dedicating in conducting my master's research, and I have a part-time job at a DELL research and development institute. I like to post some personal projects in an educational blog format. You should [check them out!](https://resteche.github.io/REsteche_blog/); And for a deeper dive, feel free to explore a little more of my work on [my github!](https://github.com/REsteche)
 
