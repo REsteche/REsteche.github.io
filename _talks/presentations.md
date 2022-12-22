@@ -4,7 +4,7 @@ collection: talks
 type: "Conference"
 permalink: /talks/presentations
 venue: "department of Physics (DF-UFPE)"
-date: 2021-12-05
+date: 2022-11-19
 location: "Recife, Pernambuco"
 ---
 
