@@ -46,21 +46,25 @@ __Advisor__: Wilson Barros Junior
 Professional experience
 ======
 
- January 2023 - Present: Data Scientist & Machine Learning Engineer
+ January 2023 - Present: **Data Scientist & Machine Learning Engineer**
  
   * NTT Data - São Paulo, Brazil
   * Duties included: Responsible for all dataOps best practices from developing to deploying LLM's on a chatbot cognitive engine that works globally.
- July 2022 - January 2023: Data Science and Machine Learning researcher
+
+
+ July 2022 - January 2023: **Data Science and Machine Learning researcher**
  
   * DELL Lead - Fortaleza, Brazil
   * Duties included: Responsible for mining textual data, creating data visualizations and implementing natural language models in a DELL API.
   
- April 2020 - Present: Researcher Fellowship of CAPES
-  * Federal University of Pernambuco
-  * Duties included: Conducting M.Sc.Research.
-  * Supervisor: Professor Eduardo Olimpio Dias
+  
+ January 2019 - December 2021: **Junior Data Scientist**
+ 
+  * Sugestão Consultoria - Fortaleza, Brazil
+  * Duties included: Responsible for implementing innovative business intelligence solutions for our clients, developing predictive models that allow our clients to make data-driven decisions and optimize their operations.
 
- July 2018 - December 2018: Teaching Assistant
+
+ July 2018 - December 2018: **Teaching Assistant**
  
   * Federal University of Pernambuco
   * Duties included: reinforcement classes and exercises solutions for students.
