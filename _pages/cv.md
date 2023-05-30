@@ -16,7 +16,7 @@ Education
 
 ### M.Sc. Foundations of Quantum mechanics
 
-* January/2021 - Today
+* April/2021 - April/2023
 * Federal University of Pernambuco, Recife, Brazil
 * GPA: 3.50/4.00
 
@@ -26,7 +26,7 @@ __Advisor__: Eduardo Olimpio Dias
 
 ### Post Graduation in Data Science 
 
-* July/2022 - Today
+* July/2022 - Feb/2023
 * Descomplica Cursos Livres S.A., RJ, Rio de Janeiro.
 
 
@@ -46,7 +46,11 @@ __Advisor__: Wilson Barros Junior
 Professional experience
 ======
 
- July 2022 - Present: Data Science and Machine Learning researcher
+ January 2023 - Present: Data Scientist & Machine Learning Engineer
+ 
+  * NTT Data - São Paulo, Brazil
+  * Duties included: Responsible for all dataOps best practices from developing to deploying LLM's on a chatbot cognitive engine that works globally.
+ July 2022 - January 2023: Data Science and Machine Learning researcher
  
   * DELL Lead - Fortaleza, Brazil
   * Duties included: Responsible for mining textual data, creating data visualizations and implementing natural language models in a DELL API.
@@ -76,7 +80,7 @@ __Toolboxes and Libraries__
 
 __Other Softwares__
 
-* HTML, LaTex, JavaScript
+* HTML, css, LaTex, JavaScript
 
 Languages
 ======
