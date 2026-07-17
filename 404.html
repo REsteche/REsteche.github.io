@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 — Ruben Esteche</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    .notfound {
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 24px;
+    }
+    .notfound__code {
+      font-family: var(--font-mono);
+      font-size: clamp(4rem, 14vw, 8rem);
+      font-weight: 700;
+      line-height: 1;
+    }
+    .notfound__msg {
+      font-family: var(--font-mono);
+      color: var(--text-dim);
+      margin: 20px 0 34px;
+    }
+  </style>
+</head>
+<body>
+  <main class="notfound">
+    <div>
+      <p class="notfound__code gradient-text">404</p>
+      <p class="notfound__msg">$ curl this-page → connection refused: hallucinated URL</p>
+      <a class="btn btn--primary" href="/">Back to reality</a>
+    </div>
+  </main>
+</body>
+</html>

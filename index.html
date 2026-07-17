@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ruben Esteche — Staff ML/AI Engineer · NLP, LLMs & MLOps</title>
+  <meta name="description" content="Ruben Esteche is a Staff ML/AI Engineer specializing in NLP, LLM architectures, RAG systems and production MLOps. Physicist by training, engineer by craft.">
+  <meta name="author" content="Ruben Esteche Araujo">
+  <link rel="canonical" href="https://resteche.github.io/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ruben Esteche — Staff ML/AI Engineer">
+  <meta property="og:description" content="NLP · LLMs · RAG · MLOps. Designing production AI systems from ingestion to inference.">
+  <meta property="og:url" content="https://resteche.github.io/">
+  <meta property="og:image" content="https://resteche.github.io/images/profile-photo.jpeg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="@ruben_esteche">
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ruben Esteche Araujo",
+    "url": "https://resteche.github.io/",
+    "jobTitle": "Staff ML/AI Engineer",
+    "worksFor": { "@type": "Organization", "name": "DataArt" },
+    "alumniOf": "Federal University of Pernambuco",
+    "sameAs": [
+      "https://www.linkedin.com/in/rubenesteche/",
+      "https://github.com/REsteche",
+      "https://stackoverflow.com/users/19163379/ruben-esteche"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ══════════════ NAV ══════════════ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="nav__logo" href="#top" aria-label="Home">
+        <span class="nav__logo-mark">RE</span>
+        <span class="nav__logo-text">ruben<span class="accent">.</span>esteche</span>
+      </a>
+      <nav class="nav__links" id="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Stack</a>
+        <a href="#research">Research</a>
+        <a href="#education">Education</a>
+        <a href="https://resteche.github.io/REsteche_blog/" target="_blank" rel="noopener">Blog ↗</a>
+        <a href="#contact" class="nav__cta">Contact</a>
+      </nav>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ══════════════ HERO ══════════════ -->
+    <section class="hero">
+      <canvas id="neural-canvas" aria-hidden="true"></canvas>
+      <div class="hero__glow" aria-hidden="true"></div>
+
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="hero__eyebrow reveal"><span class="status-dot"></span> Staff ML/AI Engineer @ DataArt</p>
+          <h1 class="hero__title reveal">
+            Ruben <span class="gradient-text">Esteche</span>
+          </h1>
+          <p class="hero__subtitle reveal">
+            I design and ship <strong>production AI systems</strong> — from
+            <span class="hl">RAG platforms</span> and <span class="hl">conversational agents</span>
+            to the <span class="hl">cloud infrastructure</span> that keeps them alive.
+            Physicist by training, engineer by craft.
+          </p>
+          <p class="hero__typing reveal" aria-live="polite">
+            <span class="prompt">$</span> <span id="typewriter"></span><span class="cursor">▊</span>
+          </p>
+          <div class="hero__actions reveal">
+            <a class="btn btn--primary" href="#projects">Explore my work</a>
+            <a class="btn btn--ghost" href="files/Ruben_Esteche_Data_Scientist.pdf" target="_blank" rel="noopener">
+              Download resume
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            </a>
+          </div>
+          <ul class="hero__social reveal" aria-label="Social links">
+            <li><a href="https://github.com/REsteche" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.35.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12v3.14c0 .3.21.66.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            </a></li>
+            <li><a href="https://www.linkedin.com/in/rubenesteche/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            </a></li>
+            <li><a href="https://stackoverflow.com/users/19163379/ruben-esteche" target="_blank" rel="noopener" aria-label="Stack Overflow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.36 20.2v-5.38h1.79V22H3v-7.18h1.8v5.38h12.56zM6.77 14.32l.37-1.76 8.79 1.85-.37 1.76-8.79-1.85zm1.16-4.21l.76-1.61 8.14 3.78-.76 1.62-8.14-3.79zm2.26-3.99l1.15-1.38 6.9 5.76-1.15 1.37-6.9-5.75zm4.45-4.25l5.36 7.21-1.44 1.07-5.36-7.21 1.44-1.07zM6.59 18.41v-1.8h8.98v1.8H6.59z"/></svg>
+            </a></li>
+            <li><a href="mailto:rubenesteche@hotmail.com" aria-label="Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            </a></li>
+          </ul>
+        </div>
+
+        <div class="hero__terminal reveal" aria-hidden="true">
+          <div class="terminal">
+            <div class="terminal__bar">
+              <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+              <span class="terminal__title">ruben@production: ~/ai-systems</span>
+            </div>
+            <div class="terminal__body">
+<pre><code><span class="t-p">$</span> <span class="t-c">whoami</span>
+<span class="t-o">staff-ml-engineer · physicist · builder</span>
+
+<span class="t-p">$</span> <span class="t-c">cat expertise.yaml</span>
+<span class="t-k">nlp_llms:</span>  <span class="t-v">[RAG, agents, transformers, fine-tuning]</span>
+<span class="t-k">mlops:</span>     <span class="t-v">[docker, k8s, ci/cd, IaC, vertex-ai]</span>
+<span class="t-k">cloud:</span>     <span class="t-v">[aws, gcp, azure]</span>
+<span class="t-k">backend:</span>   <span class="t-v">[python, fastapi, vector-dbs, graph-dbs]</span>
+
+<span class="t-p">$</span> <span class="t-c">uptime --experience</span>
+<span class="t-o">7+ years in data science &amp; ML — <span class="t-g">all systems live</span></span>
+
+<span class="t-p">$</span> <span class="t-c">./deploy --env prod</span>
+<span class="t-o t-g">✓ pipeline green · shipping intelligence</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#about" aria-label="Scroll to about section">
+        <span class="hero__scroll-line"></span>
+      </a>
+    </section>
+
+    <!-- ══════════════ ABOUT ══════════════ -->
+    <section class="section" id="about">
+      <div class="container">
+        <p class="section__index reveal">01</p>
+        <h2 class="section__title reveal">From wave functions<br>to <span class="gradient-text">production AI</span></h2>
+
+        <div class="about__grid">
+          <div class="about__text reveal">
+            <p>
+              Hello! I'm Ruben — a <strong>Staff ML/AI Engineer at
+              <a href="https://www.dataart.com/" target="_blank" rel="noopener">DataArt</a></strong>, where I steer
+              architectural strategy and cross-team execution for AI systems serving major financial institutions.
+            </p>
+            <p>
+              My path started in <strong>theoretical quantum physics</strong> — researching arrival-time and
+              tunneling-time distributions at the Federal University of Pernambuco. The same instinct that drew me to
+              modeling nature's uncertainty now drives me to build systems that reason over language:
+              <strong>RAG platforms, conversational agents, and metadata-extraction pipelines</strong> running in
+              production for companies like <strong>Bosch, NTT Data and Dell</strong>.
+            </p>
+            <p>
+              I care about the full lifecycle — not just the model, but the <strong>ingestion layers, vector &amp; graph
+              databases, CI/CD pipelines and cloud infrastructure</strong> that make AI reliable at scale. When I'm not
+              shipping, I write about ML and physics on <a href="https://resteche.github.io/REsteche_blog/" target="_blank" rel="noopener">my blog</a>.
+            </p>
+            <div class="about__stats">
+              <div class="stat"><span class="stat__num" data-count="7">0</span><span class="stat__plus">+</span><span class="stat__label">years in data &amp; ML</span></div>
+              <div class="stat"><span class="stat__num" data-count="6">0</span><span class="stat__plus"></span><span class="stat__label">companies, startup → enterprise</span></div>
+              <div class="stat"><span class="stat__num" data-count="4">0</span><span class="stat__plus"></span><span class="stat__label">languages spoken</span></div>
+            </div>
+          </div>
+
+          <aside class="about__card reveal">
+            <div class="about__photo-wrap">
+              <img src="images/profile-photo.jpeg" alt="Portrait of Ruben Esteche" width="400" height="400" loading="lazy">
+              <div class="about__photo-ring" aria-hidden="true"></div>
+            </div>
+            <ul class="about__facts">
+              <li><span class="fact-key">base</span> São Paulo, Brazil (remote-first)</li>
+              <li><span class="fact-key">role</span> Staff ML/AI Engineer</li>
+              <li><span class="fact-key">focus</span> NLP · LLMs · RAG · MLOps</li>
+              <li><span class="fact-key">degree</span> M.Sc. Quantum Physics</li>
+              <li><span class="fact-key">langs</span> EN · PT · ES · FR</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ EXPERIENCE ══════════════ -->
+    <section class="section section--alt" id="experience">
+      <div class="container">
+        <p class="section__index reveal">02</p>
+        <h2 class="section__title reveal">Experience</h2>
+        <p class="section__lead reveal">Seven years shipping data and AI products — from junior data scientist to staff-level architecture ownership.</p>
+
+        <div class="timeline">
+          <article class="timeline__item reveal">
+            <div class="timeline__marker timeline__marker--active"></div>
+            <div class="timeline__card">
+              <header>
+                <span class="timeline__period">Jul 2026 — Present</span>
+                <h3>Staff ML/AI Engineer <span class="timeline__org">· DataArt</span></h3>
+              </header>
+              <p>Overseeing architectural strategy, technical standards and cross-team execution for AI/ML systems serving major corporate financial institutions.</p>
+              <ul class="tags"><li>AI Architecture</li><li>Technical Leadership</li><li>FinTech</li></ul>
+            </div>
+          </article>
+
+          <article class="timeline__item reveal">
+            <div class="timeline__marker"></div>
+            <div class="timeline__card">
+              <header>
+                <span class="timeline__period">Jun 2025 — Jul 2026</span>
+                <h3>Senior ML/AI Engineer <span class="timeline__org">· DataArt</span></h3>
+              </header>
+              <p>Built an AI agent that turns institutional databases into conversational applications — chain-of-thought structured responses, source tracking and interactive financial plotting. Designed metadata-extraction pipelines and hierarchical chunking systems natively integrated with AWS Lambda ingestion, over vector and graph databases.</p>
+              <ul class="tags"><li>RAG</li><li>Agents</li><li>AWS · IaC</li><li>Vector &amp; Graph DBs</li></ul>
+            </div>
+          </article>
+
+          <article class="timeline__item reveal">
+            <div class="timeline__marker"></div>
+            <div class="timeline__card">
+              <header>
+                <span class="timeline__period">Jul 2024 — Jun 2025</span>
+                <h3>Senior ML/MLOps Engineer <span class="timeline__org">· Bosch AI Hub</span></h3>
+              </header>
+              <p>Architected production conversational AI, enterprise chatbots and RAG platforms with LLMs and deep NLP. Engineered scalable Azure environments with CI/CD, Docker and Kubernetes — cutting development lifecycle time by ~50%. Collaborated on computer-vision product design.</p>
+              <ul class="tags"><li>LLMs</li><li>Azure</li><li>Kubernetes</li><li>Computer Vision</li></ul>
+            </div>
+          </article>
+
+          <article class="timeline__item reveal">
+            <div class="timeline__marker"></div>
+            <div class="timeline__card">
+              <header>
+                <span class="timeline__period">Jan 2023 — Jul 2024</span>
+                <h3>Lead Data Scientist &amp; MLOps Engineer <span class="timeline__org">· NTT Data</span></h3>
+              </header>
+              <p>Led the project's AI division — sprints, backlog, team performance and algorithmic bottlenecks. Shipped an enterprise NLP chatbot system reaching <strong>92% classification precision</strong>, built generative AI-as-a-Service on microservices, and governed end-to-end MLOps architecture compliance.</p>
+              <ul class="tags"><li>NLP</li><li>Team Leadership</li><li>AIaaS</li><li>DataOps</li></ul>
+            </div>
+          </article>
+
+          <article class="timeline__item reveal">
+            <div class="timeline__marker"></div>
+            <div class="timeline__card">
+              <header>
+                <span class="timeline__period">Jun 2022 — Jan 2023</span>
+                <h3>ML Researcher &amp; Backend Developer <span class="timeline__org">· Dell Lead</span></h3>
+              </header>
+              <p>Web scraping, text classification and custom ML for a global-scale web accessibility initiative. Integrated NLP modules into high-throughput RESTful microservices; improved training/inference speed by 10% and compute-efficiency by 15%+.</p>
+              <ul class="tags"><li>Text Classification</li><li>REST APIs</li><li>Model Optimization</li></ul>
+            </div>
+          </article>
+
+          <article class="timeline__item reveal">
+            <div class="timeline__marker"></div>
+            <div class="timeline__card">
+              <header>
+                <span class="timeline__period">Jan 2019 — Dec 2021</span>
+                <h3>Data Scientist <span class="timeline__org">· Sugestão Consultoria</span></h3>
+              </header>
+              <p>From junior to technical lead of data-intelligence initiatives: predictive architectures with a 90% accuracy floor driving ~10% bottom-line expansion for clients, behavioral demand-forecast models at 95% accuracy, and automated ingestion pipelines.</p>
+              <ul class="tags"><li>Predictive Modeling</li><li>BI</li><li>Consulting</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ PROJECTS ══════════════ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <p class="section__index reveal">03</p>
+        <h2 class="section__title reveal">Selected projects</h2>
+        <p class="section__lead reveal">Open-source work spanning generative AI, NLP tooling and computational physics.</p>
+
+        <div class="projects__grid">
+          <a class="project reveal" href="https://github.com/REsteche/Stable_Diffusion_API" target="_blank" rel="noopener">
+            <div class="project__top">
+              <span class="project__icon">◈</span>
+              <span class="project__stars" data-repo="REsteche/Stable_Diffusion_API">★ 11</span>
+            </div>
+            <h3>Stable Diffusion API</h3>
+            <p>Full backend for generative image creation — a REST API wrapping Stable Diffusion for unique image synthesis, ready for production integration.</p>
+            <ul class="tags"><li>Python</li><li>GenAI</li><li>REST API</li></ul>
+          </a>
+
+          <a class="project reveal" href="https://github.com/REsteche/Google_Scholar_Bot" target="_blank" rel="noopener">
+            <div class="project__top">
+              <span class="project__icon">◇</span>
+              <span class="project__stars" data-repo="REsteche/Google_Scholar_Bot">★ 2</span>
+            </div>
+            <h3>Google Scholar Bot</h3>
+            <p>Telegram bot that manages connections to Google Scholar and lets you interact with academic search results conversationally.</p>
+            <ul class="tags"><li>Python</li><li>Bots</li><li>Scholarly APIs</li></ul>
+          </a>
+
+          <a class="project reveal" href="https://github.com/REsteche/Physical-simulations" target="_blank" rel="noopener">
+            <div class="project__top">
+              <span class="project__icon">∿</span>
+              <span class="project__stars" data-repo="REsteche/Physical-simulations">★ 3</span>
+            </div>
+            <h3>Physical Simulations</h3>
+            <p>A series of physics simulations in C and Python exploring numerical methods for differential equations — from wave packets to chaotic systems.</p>
+            <ul class="tags"><li>C · Python</li><li>Numerical Methods</li><li>Physics</li></ul>
+          </a>
+
+          <a class="project reveal" href="https://github.com/REsteche/BERT-nha" target="_blank" rel="noopener">
+            <div class="project__top">
+              <span class="project__icon">⬡</span>
+              <span class="project__stars" data-repo="REsteche/BERT-nha">★ 0</span>
+            </div>
+            <h3>BERT-nha</h3>
+            <p>A study case of BERT and LLMs in general through Noronha — dissecting transformer internals with an MLOps-first workflow.</p>
+            <ul class="tags"><li>Transformers</li><li>MLOps</li><li>NLP</li></ul>
+          </a>
+
+          <a class="project reveal" href="https://github.com/REsteche/Linkedin-Analysis" target="_blank" rel="noopener">
+            <div class="project__top">
+              <span class="project__icon">◎</span>
+              <span class="project__stars" data-repo="REsteche/Linkedin-Analysis">★ 1</span>
+            </div>
+            <h3>LinkedIn Analysis</h3>
+            <p>Data analysis of my own LinkedIn network — graph exploration and visualization of professional connection patterns.</p>
+            <ul class="tags"><li>Jupyter</li><li>Data Viz</li><li>Networks</li></ul>
+          </a>
+
+          <a class="project reveal" href="https://github.com/REsteche/manimStudies" target="_blank" rel="noopener">
+            <div class="project__top">
+              <span class="project__icon">✦</span>
+              <span class="project__stars" data-repo="REsteche/manimStudies">★ 1</span>
+            </div>
+            <h3>Manim Studies</h3>
+            <p>Educational math animations built with Manim — turning abstract mathematics into beautiful, shareable visual explanations.</p>
+            <ul class="tags"><li>Manim</li><li>Education</li><li>Math Viz</li></ul>
+          </a>
+        </div>
+
+        <div class="projects__more reveal">
+          <a class="btn btn--ghost" href="https://github.com/REsteche?tab=repositories" target="_blank" rel="noopener">Browse all repositories →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ SKILLS ══════════════ -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <p class="section__index reveal">04</p>
+        <h2 class="section__title reveal">Stack &amp; domains</h2>
+        <p class="section__lead reveal">The tools I reach for when taking AI from notebook to production.</p>
+
+        <div class="skills__grid">
+          <div class="skill-card reveal">
+            <div class="skill-card__head">
+              <span class="skill-card__glyph">🧠</span>
+              <h3>AI · NLP · LLMs</h3>
+            </div>
+            <p>Building systems that understand and generate language, grounded and observable.</p>
+            <ul class="chips">
+              <li>RAG</li><li>LLM Agents</li><li>Transformers</li><li>Generative AI</li>
+              <li>Deep Learning</li><li>Computer Vision</li><li>CNNs</li><li>Statistical Modeling</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-card__head">
+              <span class="skill-card__glyph">⚙️</span>
+              <h3>MLOps &amp; Infra</h3>
+            </div>
+            <p>Reliable pipelines from ingestion to inference — automated, versioned, reproducible.</p>
+            <ul class="chips">
+              <li>Docker</li><li>Kubernetes</li><li>CI/CD</li><li>IaC</li>
+              <li>Azure DevOps</li><li>Vertex AI</li><li>DataOps</li><li>Vector &amp; Graph DBs</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-card__head">
+              <span class="skill-card__glyph">☁️</span>
+              <h3>Cloud Platforms</h3>
+            </div>
+            <p>Multi-cloud production experience across the three major providers.</p>
+            <ul class="chips">
+              <li>AWS Lambda</li><li>ECS</li><li>S3</li><li>API Gateway</li>
+              <li>GCP</li><li>Microsoft Azure</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-card__head">
+              <span class="skill-card__glyph">🛠️</span>
+              <h3>Backend &amp; Languages</h3>
+            </div>
+            <p>Solid engineering foundations under every model I ship.</p>
+            <ul class="chips">
+              <li>Python</li><li>FastAPI</li><li>Flask</li><li>Django</li>
+              <li>SQL</li><li>C / C++</li><li>Redis</li><li>MongoDB</li><li>ElasticSearch</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="certs reveal">
+          <h3 class="certs__title">Certifications</h3>
+          <ul class="certs__list">
+            <li>
+              <span class="certs__badge">GCP</span>
+              <div><strong>Professional Machine Learning Engineer</strong><span>Google Cloud · 2025</span></div>
+            </li>
+            <li>
+              <span class="certs__badge">GCP</span>
+              <div><strong>Build &amp; Deploy ML Solutions on Vertex AI</strong><span>Google Cloud · 2025</span></div>
+            </li>
+            <li>
+              <span class="certs__badge">GCP</span>
+              <div><strong>Generative AI Fundamentals</strong><span>Google Cloud Skills Boost · 2023</span></div>
+            </li>
+            <li>
+              <span class="certs__badge">ICTP</span>
+              <div><strong>School of Research Data Science</strong><span>ICTP-SAIFR · 2022</span></div>
+            </li>
+            <li>
+              <span class="certs__badge">IBM</span>
+              <div><strong>Databases &amp; SQL for Data Science</strong><span>IBM · 2022</span></div>
+            </li>
+            <li>
+              <span class="certs__badge">UFC</span>
+              <div><strong>CNN Design with TensorFlow</strong><span>Federal University of Ceará · 2020</span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ RESEARCH ══════════════ -->
+    <section class="section" id="research">
+      <div class="container">
+        <p class="section__index reveal">05</p>
+        <h2 class="section__title reveal">Research &amp; writing</h2>
+        <p class="section__lead reveal">Before LLMs, I modeled time itself — quantum foundations research that still shapes how I think about uncertainty.</p>
+
+        <div class="research__grid">
+          <article class="research-card reveal">
+            <span class="research-card__type">M.Sc. Research</span>
+            <h3>A Space-Time Symmetric Extension of Quantum Mechanics</h3>
+            <p>Developed a new space-conditional solution for particles under time-dependent initial conditions, benchmarked against absorptive-potential models and probability-current time distributions. Presented at national physics conferences and defended at UFPE.</p>
+            <div class="research-card__links">
+              <a href="https://github.com/REsteche/master_works" target="_blank" rel="noopener">Numerical models ↗</a>
+              <a href="https://youtu.be/X2jTDtR0kKk" target="_blank" rel="noopener">Defense recording ↗</a>
+            </div>
+          </article>
+
+          <article class="research-card reveal">
+            <span class="research-card__type">Undergraduate Research</span>
+            <h3>Fluid Interfaces: Curvature Relations &amp; Euler Elastics</h3>
+            <p>Revisited Euler's elastica to analytically describe curvature relations in two-fluid immiscible systems, complemented by numerical simulation of nonlinear ODEs and laboratory experiments.</p>
+            <div class="research-card__links">
+              <a href="https://github.com/REsteche/REsteche.github.io/blob/master/images/Apresenta%C3%A7%C3%A3o_coloquio_jr.pdf" target="_blank" rel="noopener">Presentation ↗</a>
+            </div>
+          </article>
+
+          <article class="research-card research-card--blog reveal">
+            <span class="research-card__type">Blog</span>
+            <h3>REsteche's Lab Notebook</h3>
+            <p>Educational posts where physics meets machine learning — deep-learning text projects, gaussian wave packets, Lorenz attractors, statistical mechanics and more, all as executable notebooks.</p>
+            <div class="research-card__links">
+              <a href="https://resteche.github.io/REsteche_blog/" target="_blank" rel="noopener">Read the blog ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ EDUCATION ══════════════ -->
+    <section class="section section--alt" id="education">
+      <div class="container">
+        <p class="section__index reveal">06</p>
+        <h2 class="section__title reveal">Education</h2>
+
+        <div class="edu__grid">
+          <article class="edu-card reveal">
+            <span class="edu-card__year">2023</span>
+            <h3>M.Sc. Theoretical Quantum Physics</h3>
+            <p class="edu-card__school">Federal University of Pernambuco</p>
+            <p>Minor in Computational Physics. Thesis on arrival &amp; tunneling time distributions in a space-time symmetric formalism. CAPES graduate fellowship.</p>
+          </article>
+          <article class="edu-card reveal">
+            <span class="edu-card__year">2022</span>
+            <h3>Postgraduate Degree, Data Science</h3>
+            <p class="edu-card__school">Descomplica University</p>
+            <p>Specialization covering statistical learning, ML engineering practice and applied data science.</p>
+          </article>
+          <article class="edu-card reveal">
+            <span class="edu-card__year">2020</span>
+            <h3>B.Sc. Physics</h3>
+            <p class="edu-card__school">Federal University of Pernambuco</p>
+            <p>Undergraduate research in fluid dynamics and Euler elastics; teaching assistant for Physics for Computer Science.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ CONTACT ══════════════ -->
+    <section class="section section--contact" id="contact">
+      <div class="container contact reveal">
+        <p class="section__index">07</p>
+        <h2 class="section__title">Let's build something<br><span class="gradient-text">intelligent</span> together</h2>
+        <p class="contact__lead">
+          Collaborations, consulting, speaking, hiring — or just to talk shop about LLMs and quantum mechanics.
+          My inbox is open.
+        </p>
+        <div class="contact__actions">
+          <a class="btn btn--primary btn--lg" href="mailto:rubenesteche@hotmail.com">rubenesteche@hotmail.com</a>
+          <a class="btn btn--ghost btn--lg" href="https://www.linkedin.com/in/rubenesteche/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__sig"><span class="prompt">$</span> echo "designed &amp; engineered by Ruben Esteche · <span id="year">2026</span>"</p>
+      <ul class="footer__links">
+        <li><a href="https://github.com/REsteche" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/rubenesteche/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://stackoverflow.com/users/19163379/ruben-esteche" target="_blank" rel="noopener">Stack Overflow</a></li>
+        <li><a href="https://resteche.github.io/REsteche_blog/" target="_blank" rel="noopener">Blog</a></li>
+        <li><a href="files/Ruben_Esteche_Data_Scientist.pdf" target="_blank" rel="noopener">Resume</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
