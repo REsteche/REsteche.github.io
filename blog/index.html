@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog — Ruben Esteche</title>
+  <meta name="description" content="Posts on physics, machine learning, and programming by Ruben Esteche.">
+  <link rel="canonical" href="https://resteche.github.io/blog/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/blog.css">
+</head>
+<body class="blog-body">
+  <header class="nav is-scrolled" id="nav">
+    <div class="nav__inner">
+      <a class="nav__logo" href="/" aria-label="Home">
+        <span class="nav__logo-mark">RE</span>
+        <span class="nav__logo-text">ruben<span class="accent">.</span>esteche</span>
+      </a>
+      <nav class="nav__links nav__links--static" aria-label="Primary">
+        <a href="/#about">About</a>
+        <a href="/#experience">Experience</a>
+        <a href="/#projects">Projects</a>
+        <a href="/blog/" class="is-active">Blog</a>
+        <a href="/#contact" class="nav__cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="blog-main">
+    <section class="container blog-index">
+      <header class="blog-index__header">
+        <p class="section__index">blog</p>
+        <h1 class="section__title">Lab <span class="gradient-text">notebook</span></h1>
+        <p class="section__lead">Physics, machine learning and programming — long-form posts written as executable Jupyter notebooks.</p>
+      </header>
+      <div class="blog-index__grid">
+        <a class="post-card" href="/blog/monte-carlo.html">
+          <time class="post-card__date" datetime="2022-06-07">Jun 7, 2022</time>
+          <h2>Gambling, physics, and one of my favorite simulations</h2>
+          <p>A general notebook to introduce details and practical examples of the Monte Carlo method for simulations.</p>
+          <ul class="tags"><li>Chaos</li><li>Physics</li><li>Numerical Methods</li><li>Python</li></ul>
+          <span class="post-card__more">Read post →</span>
+        </a>
+        <a class="post-card" href="/blog/paperplot.html">
+          <time class="post-card__date" datetime="2022-06-01">Jun 1, 2022</time>
+          <h2>How to make plots for scientific publications in python?</h2>
+          <p>The main purpose of this post is to present a practical example of how to improve the design of a graphic for an article. Here I intend to provide a practical example as well as a structure to be followed in several cases.</p>
+          <ul class="tags"><li>Plots</li><li>Python</li><li>Scientific Publication</li><li>Tutotial</li></ul>
+          <span class="post-card__more">Read post →</span>
+        </a>
+        <a class="post-card" href="/blog/schroedinger.html">
+          <time class="post-card__date" datetime="2022-05-31">May 31, 2022</time>
+          <h2>Basic quantum mechanics: the Schrodinger equation</h2>
+          <p>I want to discuss in a didactic way the main and most important equation of quantum mechanics, given its direct importance to my area of research, and approach different situations in which we can observe it.</p>
+          <ul class="tags"><li>Quantum mechanics</li><li>Quantum Foundations</li><li>Schrodinger Equation</li></ul>
+          <span class="post-card__more">Read post →</span>
+        </a>
+        <a class="post-card" href="/blog/pseudoprobabilityfunctions.html">
+          <time class="post-card__date" datetime="2022-04-25">Apr 25, 2022</time>
+          <h2>Quasiprobability functions using QuTip</h2>
+          <p>Here I want to present more of the foundations of quasiprobability functions and provide tools to facilitate its visualization.</p>
+          <ul class="tags"><li>Probability</li><li>Quantum Mechanics</li><li>QuTip</li><li>Wigner</li></ul>
+          <span class="post-card__more">Read post →</span>
+        </a>
+        <a class="post-card" href="/blog/qubism.html">
+          <time class="post-card__date" datetime="2022-04-24">Apr 24, 2022</time>
+          <h2>Visualizing Quantum Mechanics through QuTip</h2>
+          <p>The intention of this notebook is to present basic concepts of quantum mechanics through an interesting visualization tool built specifically for this purpose.</p>
+          <ul class="tags"><li>plot_schmidt</li><li>plot_qubism</li><li>complex_array_to_rgb</li><li>Entanglement</li></ul>
+          <span class="post-card__more">Read post →</span>
+        </a>
+        <a class="post-card" href="/blog/crypto.html">
+          <time class="post-card__date" datetime="2022-03-28">Mar 28, 2022</time>
+          <h2>Using Machine Learning principles to predict cryptocurrency prices</h2>
+          <p>Another attempt to further explore Pytorch's possibilities for data science. This time, let's enter the world of crypto-businesses!</p>
+          <ul class="tags"><li>Deep Learning</li><li>Pytorch</li><li>Data Science</li><li>Neural Network</li></ul>
+          <span class="post-card__more">Read post →</span>
+        </a>
+        <a class="post-card" href="/blog/dl-text-project.html">
+          <time class="post-card__date" datetime="2022-03-01">Mar 1, 2022</time>
+          <h2>Text Classifier Network</h2>
+          <p>In this post I present my first attemp to develop a full textual neural network and explains all its principles.</p>
+          <ul class="tags"><li>Deep Learning</li><li>Pytorch</li><li>Text classification</li><li>Neural Network</li></ul>
+          <span class="post-card__more">Read post →</span>
+        </a>
+        <a class="post-card" href="/blog/pacote-gaussiano.html">
+          <time class="post-card__date" datetime="2022-01-28">Jan 28, 2022</time>
+          <h2>A temporal Gaussian wave packet</h2>
+          <p>In this Post I will show how we can use the STS theory to create temporal distributions.</p>
+          <ul class="tags"><li>Quantum Mechanics</li><li>Quantum Foundations</li><li>Time distributions</li></ul>
+          <span class="post-card__more">Read post →</span>
+        </a>
+        <a class="post-card" href="/blog/teoria-sts.html">
+          <time class="post-card__date" datetime="2021-12-19">Dec 19, 2021</time>
+          <h2>Uma extensão espaço tempo simétrica da mecânica quântica</h2>
+          <p>Here, I will present you the spacetime symmetrical formalism of non relativistic quantum mechanics.</p>
+          <ul class="tags"><li>Quantum Mechanics</li><li>Quantum Foundations</li><li>Time distributions</li></ul>
+          <span class="post-card__more">Read post →</span>
+        </a>
+        <a class="post-card" href="/blog/lorenz-animation.html">
+          <time class="post-card__date" datetime="2021-10-20">Oct 20, 2021</time>
+          <h2>Animating the Lorenz Attractor with Python</h2>
+          <p>A post to explain a little bit more about chaos theory and animation processes using python.</p>
+          <ul class="tags"><li>Chaos Theory</li><li>Butterfly Effect</li><li>Python Animation</li></ul>
+          <span class="post-card__more">Read post →</span>
+        </a>
+        <a class="post-card" href="/blog/statistical-mechanics.html">
+          <time class="post-card__date" datetime="2021-07-20">Jul 20, 2021</time>
+          <h2>Statistical mechanics</h2>
+          <p>Um compilado de atividades desenvolvidas durante a minha disciplina de mecänica estatistica na pós graduação.</p>
+          <ul class="tags"><li>Modelo de Ising</li><li>Chaos Theory</li><li>Drunk Walker</li><li>Maths</li></ul>
+          <span class="post-card__more">Read post →</span>
+        </a>
+        <a class="post-card" href="/blog/som-hidrogenio.html">
+          <time class="post-card__date" datetime="2021-06-10">Jun 10, 2021</time>
+          <h2>O som do átomo de hidrogênio</h2>
+          <p>Um post em português para apresentar um projeto com objetivo de escutar o som do átomo de hidrogênio! Futuramente, pretendo upar outros átomos aqui.</p>
+          <ul class="tags"><li>Estrutura da matéria</li><li>Física Moderna</li><li>Física atomica</li><li>Musica</li></ul>
+          <span class="post-card__more">Read post →</span>
+        </a>
+        <a class="post-card" href="/blog/fastcore.html">
+          <time class="post-card__date" datetime="2020-09-01">Sep 1, 2020</time>
+          <h2>fastcore: An Underrated Python Library</h2>
+          <p>A unique python library that extends the python programming language and provides utilities that enhance productivity.</p>
+          <ul class="tags"><li>fastcore</li><li>fastai</li></ul>
+          <span class="post-card__more">Read post →</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__sig"><span class="prompt">$</span> echo "designed &amp; engineered by Ruben Esteche"</p>
+      <ul class="footer__links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="https://github.com/REsteche" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/rubenesteche/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
