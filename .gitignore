@@ -1,2 +1,3 @@
 _site/
-
+.venv-blog/
+.DS_Store

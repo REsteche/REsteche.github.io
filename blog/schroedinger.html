@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Basic quantum mechanics: the Schrodinger equation — Ruben Esteche</title>
+  <meta name="description" content="I want to discuss in a didactic way the main and most important equation of quantum mechanics, given its direct importance to my area of research, and approach different situations in which we can observe it.">
+  <link rel="canonical" href="https://resteche.github.io/blog/schroedinger.html">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/blog.css">
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["$", "$"], ["\\(", "\\)"]],
+        displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+        processEscapes: true
+      },
+      options: { skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body class="blog-body">
+  <header class="nav is-scrolled" id="nav">
+    <div class="nav__inner">
+      <a class="nav__logo" href="/" aria-label="Home">
+        <span class="nav__logo-mark">RE</span>
+        <span class="nav__logo-text">ruben<span class="accent">.</span>esteche</span>
+      </a>
+      <nav class="nav__links nav__links--static" aria-label="Primary">
+        <a href="/#about">About</a>
+        <a href="/#experience">Experience</a>
+        <a href="/#projects">Projects</a>
+        <a href="/blog/" class="is-active">Blog</a>
+        <a href="/#contact" class="nav__cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="blog-main">
+    <article class="post container">
+      <header class="post__header">
+        <a class="post__back" href="/blog/">← All posts</a>
+        <h1 class="post__title">Basic quantum mechanics: the Schrodinger equation</h1>
+        <p class="post__meta">
+          <time datetime="2022-05-31">May 31, 2022</time>
+          <span class="post__dot">·</span> 8 min read
+        </p>
+        <ul class="tags post__tags"><li>Quantum mechanics</li><li>Quantum Foundations</li><li>Schrodinger Equation</li></ul>
+      </header>
+      <div class="post__content">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2>Introduction</h2>
+<p>Many of us know the main properties of the wave function, a probability amplitude of complex value that is responsible for describing the state of an isolated quantum system, as is also clear its mathematical origin, the Schrodinger equation. Despite dealing daily with this impressive relationship between physics and mathematics, this week I decided to take a little extra time to review its fundamentals and study its details again, since I only did this the first time I studied the fundamentals of quantum mechanics during my graduation.</p>
+<p>Here, taking advantage of the opportunity given the advancement of my knowledge about MQ and different programming and visualization tools, I decided to produce a publication on this blog in order to share this knowledge in a different way to what is usually found on the internet, in a more constructive and visual way.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2>Time dependent Schrödinger equation</h2>
+<p>The idea we are going to use here is that: we want to describe an electron wavefunction by a wavepacket $\psi (x,y)$ that is a function of position $x$ and time $t$. We can than assume
+that the electron is initially localized around $x_0$, and following the <a href="https://en.wikipedia.org/wiki/Uncertainty_principle">uncertainty principle</a>, we can model the system by a Gaussian multiplying a plane wave (wich we know as a phase in the wave function):</p>
+<p>$$\psi(x,t=0)=\exp{\left[-\frac{1}{2}\left(\frac{x-x_0}{\sigma _0}
+\right)^2\right ]} e^{ik_0x}
+$$</p>
+<p>As mentioned before, this wave function does not correspond to an electron with a well
+defined momentum. However, if the width of the Gaussian $\sigma _0$ is
+made very large, the electron gets spread over a sufficiently large
+region of space and can be considered as a plane wave with momentum
+$k_0$ with a slowly varying amplitude, that is, we are dealing with a system coherent with the ideas of Heisenberg.</p>
+<p>The behavior of this wave packet as a function of time is described by
+the time-dependent Schröedinger equation (here in 1d):</p>
+<p>$$i\frac{\partial \psi}{\partial t}=H\psi(x,t).$$</p>
+<p>$H$ is the Hamiltonian operator:</p>
+<p>$$H=-\frac{1}{2m}\frac{\partial ^2}{\partial x^2}+V(x),$$</p>
+<p>where $V(x)$ is a <em>time independent potential</em>. The
+Hamiltonian is chosen to be real. Note that we have picked the energy units such
+that $\hbar=1$, and from now on, we will pick mass units such that
+$2m=1$ only to make equations simpler.</p>
+<p>Scrhödinger’s equation is obviously a <strong>P.D.E.</strong>, we can then proceed through the usual methods known to solve this type of equation. The main observation is that this time we have to deal with complex
+numbers, and the function $\psi (x,y)$ has real and imaginary parts:</p>
+<p>$$\psi (x,t) = R(x,t)+iI(x,t).$$</p>
+<p>However, is this section we will present an alternative method that makes the quantum mechanical nature of this problem more transparent.</p>
+<h2>The wave function properties</h2>
+<p>Before we proceed, I would like to list here the main properties of the wave function, which is effectively the solution of the Schrodinger equation defined previously.</p>
+<ul>
+<li><strong>Linearity</strong>:</li>
+</ul>
+<p>If $\Psi_1(x,t)$ is a solution for the Schrödinger equation and $\Psi_2(x,t)$ is also a solution then any linear combination $\Psi(x,t) = \alpha \Psi_1(x,t) + \beta \Psi_2(x,t)$ is a solution where $\alpha$ and $\beta \in \mathbb{C}$.</p>
+<ul>
+<li><strong>Unitarity</strong>:</li>
+</ul>
+<p>The wave function is unitary (for real potentials) which means it preservers the probability distribution through the evolution of time</p>
+<p>$$ \frac{d}{dt} \int_{- \infty}^{\infty} |\Psi(x,t)|^2 dx = 0 $$</p>
+<ul>
+<li><strong>Deterministic</strong>:</li>
+</ul>
+<p>If we have complete knowledge of the system at some moment of time $t_0$, $\Psi(x,t_0)$ we can determine unambiguously the wave function in all subsequent of time $\Psi(x,t)$.</p>
+<h2>The time-evolution operator</h2>
+<p>The Scrödinger equation presented in the previous section can be integrated in a formal sense
+to obtain:</p>
+<p>$$\psi(x,t)=U(t)\psi(x,t=0)=e^{-iHt}\psi(x,t).$$</p>
+<p>From here we deduce that the wave function (which is unitary, then its norm is preserved during the following operation) can be evolved forward in time by applying the time-evolution operator $U(t)=\exp{-iHt}$:</p>
+<p>$$\psi(t+\Delta t)= e^{-iH\delta t}\psi(t).$$</p>
+<p>Likewise, the inverse of the time-evolution operator moves the wave
+function back in time:</p>
+<p>$$\psi(t-\Delta t)=e^{iH\Delta t}\psi(t),$$</p>
+<p>where we have use the property $$U^{-1}(t)=U(-t).$$ Although it would be nice
+to have an algorithm based on the direct application of $U$, it has been
+shown that this is not stable. Hence, we apply the following relation:</p>
+<p>$$\psi(t+\Delta t)=\psi(t-\Delta t)+\left[e^{-iH\Delta t}-e^{iH\Delta
+t}\right]\psi(t).$$</p>
+<p>Now, the derivatives with recpect to $x$ can be approximated by</p>
+<p>$$\begin{aligned}
+\frac{\partial \psi}{\partial t}
+&amp;\sim&amp; \frac{\psi(x,t+\Delta t)-\psi(x, t)}{\Delta t}, \\
+\frac{\partial ^2 \psi}{\partial x^2} &amp;\sim&amp; \frac{\psi(x+\Delta  %
+x,t)+\psi(x-\Delta x,t)-2\psi(x,t)}{(\Delta x)^2}.
+\end{aligned}$$</p>
+<p>The time evolution operator is
+approximated by:</p>
+<p>$$U(\Delta t)=e^{-iH\Delta t} \sim 1+iH\Delta t.$$</p>
+<p>Replacing the expression for $H$, we obtain:</p>
+<p>$$\psi(x,t+\Delta t)=\psi(x,t)-i[(2\alpha+\Delta t
+V(x))\psi(x,t)-\alpha(\psi(x+\Delta x,t)+\psi(x-\Delta x,t))],
+$$</p>
+<p>with $\alpha=\frac{\Delta t}{(\Delta x)^2}$. The
+probability of finding an electron at $(x,t)$ is given as we know by the probability density of the wave funciton, which can be obtained by multiplying it by its complex conjugate, or as we well know
+$|\psi(x,t)|^2$. This equations do not conserve this probability exactly,
+but the error is of the order of $(\Delta t)^2$. Note that the convergence can be
+determined by using smaller steps.</p>
+<p>We can write this expression explicitly for the real and imaginary parts, becoming:</p>
+<p>$$\begin{aligned}
+\mathrm{Im} \psi(x, t + \Delta t) = \mathrm{Im} \psi(x, t) + \alpha \mathrm{Re} \psi (x + \Delta x, t) + \alpha \mathrm{Re}\psi(x − \Delta x, t) − (2\alpha + \Delta t V (x)) \mathrm{Re} \psi(x, t) \\
+\mathrm{Re} \psi(x, t + \Delta t) = \mathrm{Re} \psi(x, t) −  \alpha \mathrm{Im} \psi (x + \Delta x, t) − \alpha \mathrm{Im} \psi (x − \Delta x, t) + (2\alpha + \Delta tV (x)) \mathrm{Im} \psi(x, t)
+\end{aligned}$$</p>
+<p>Notice the symmetry between these equations: while the calculation of the imaginary part of the wave function at the later time involves a weighted average of the real part of the wave function at diferent positions from the earlier time, the calculation of the real part involves a weighted average of the imaginary part for di erent positions at the earlier time. This intermixing of the real and imaginary parts of the wave function may seem a bit strange, but remember that this situation is a direct result of our breaking up the wave function into its real and imaginary parts in the first place!</p>
+<h3>Experimenting in python: The Harmonic Potential</h3>
+<p>Now, let's try the exercise of animating the behavior of a Gaussian wave-packet moving along the $x$ axis under action of a harmonic potential!</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">pyplot</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.animation</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">animation</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">HTML</span>
+
+
+<span class="n">lx</span><span class="o">=</span><span class="mi">20</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="mf">0.04</span>
+<span class="n">nx</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">lx</span><span class="o">/</span><span class="n">dx</span><span class="p">)</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="n">dx</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mf">20.</span>
+<span class="n">V0</span> <span class="o">=</span> <span class="mi">60</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="n">dt</span><span class="o">/</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">lx</span><span class="p">),</span> <span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">xlabel</span><span class="o">=</span><span class="s1">'x'</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">'|Psi|^2'</span><span class="p">)</span>
+<span class="n">points</span><span class="p">,</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([],</span> <span class="p">[],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">''</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'-'</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">psi0_r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nx</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">psi0_i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nx</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">lx</span><span class="o">+</span><span class="n">dx</span><span class="p">,</span> <span class="n">dx</span><span class="p">)</span>
+
+<span class="c1">#Define your potential </span>
+<span class="n">V</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nx</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">V</span> <span class="o">=</span> <span class="n">V0</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">lx</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="c1">#Initial conditions: wave packet</span>
+<span class="n">sigma2</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">k0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mf">10.5</span>
+<span class="n">x0</span> <span class="o">=</span> <span class="n">lx</span><span class="o">/</span><span class="mi">2</span>
+<span class="k">for</span> <span class="n">ix</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">nx</span><span class="p">):</span>
+    <span class="n">psi0_r</span><span class="p">[</span><span class="n">ix</span><span class="p">]</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="p">((</span><span class="n">ix</span><span class="o">*</span><span class="n">dx</span><span class="o">-</span><span class="n">x0</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">sigma2</span><span class="p">)</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">k0</span><span class="o">*</span><span class="n">ix</span><span class="o">*</span><span class="n">dx</span><span class="p">)</span>
+    <span class="n">psi0_i</span><span class="p">[</span><span class="n">ix</span><span class="p">]</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="p">((</span><span class="n">ix</span><span class="o">*</span><span class="n">dx</span><span class="o">-</span><span class="n">x0</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">sigma2</span><span class="p">)</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">k0</span><span class="o">*</span><span class="n">ix</span><span class="o">*</span><span class="n">dx</span><span class="p">)</span>
+    
+<span class="k">def</span><span class="w"> </span><span class="nf">solve</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">psi0_r</span><span class="p">,</span> <span class="n">psi0_i</span>
+
+    <span class="k">for</span> <span class="n">ix</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">nx</span><span class="o">-</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">psi0_i</span><span class="p">[</span><span class="n">ix</span><span class="p">]</span><span class="o">=</span><span class="n">psi0_i</span><span class="p">[</span><span class="n">ix</span><span class="p">]</span><span class="o">+</span><span class="n">alpha</span><span class="o">*</span><span class="n">psi0_r</span><span class="p">[</span><span class="n">ix</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">alpha</span><span class="o">*</span><span class="n">psi0_r</span><span class="p">[</span><span class="n">ix</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="p">(</span><span class="mf">2.</span><span class="o">*</span><span class="n">alpha</span><span class="o">+</span><span class="n">dt</span><span class="o">*</span><span class="n">V</span><span class="p">[</span><span class="n">ix</span><span class="p">])</span><span class="o">*</span><span class="n">psi0_r</span><span class="p">[</span><span class="n">ix</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">ix</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">nx</span><span class="o">-</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">psi0_r</span><span class="p">[</span><span class="n">ix</span><span class="p">]</span><span class="o">=</span><span class="n">psi0_r</span><span class="p">[</span><span class="n">ix</span><span class="p">]</span><span class="o">-</span><span class="n">alpha</span><span class="o">*</span><span class="n">psi0_i</span><span class="p">[</span><span class="n">ix</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">alpha</span><span class="o">*</span><span class="n">psi0_i</span><span class="p">[</span><span class="n">ix</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="p">(</span><span class="mf">2.</span><span class="o">*</span><span class="n">alpha</span><span class="o">+</span><span class="n">dt</span><span class="o">*</span><span class="n">V</span><span class="p">[</span><span class="n">ix</span><span class="p">])</span><span class="o">*</span><span class="n">psi0_i</span><span class="p">[</span><span class="n">ix</span><span class="p">]</span>
+        
+    <span class="n">points</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">psi0_r</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">psi0_i</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">points</span><span class="p">,)</span>
+
+
+
+<span class="n">anim</span> <span class="o">=</span> <span class="n">animation</span><span class="o">.</span><span class="n">FuncAnimation</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">solve</span><span class="p">,</span> <span class="n">frames</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+
+<span class="n">HTML</span><span class="p">(</span><span class="n">anim</span><span class="o">.</span><span class="n">to_jshtml</span><span class="p">())</span>            
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img alt="" src="posts_images/post1.gif"/></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3>Adding a potential barrier</h3>
+<p>Let's try to do it one more time, but now lets do a Gaussian wave-packet moving along the x axis passing through a potential barrier, which is a situation that i have to deal daily in my research works. To avoid tunneling (which a haven't mentioned in this post, so I'm going to save it to another special post), we are going to set a really high potential compared to the energy of our wave, so most of the wave is going to be reflected by the potential</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.animation</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">animation</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">HTML</span>
+
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">lx</span><span class="p">),</span> <span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">xlabel</span><span class="o">=</span><span class="s1">'x'</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">'$|\Psi|^2$'</span><span class="p">)</span>
+<span class="n">points</span><span class="p">,</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([],</span> <span class="p">[],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">''</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'-'</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">x0</span><span class="o">=</span><span class="mi">6</span>
+
+<span class="k">for</span> <span class="n">ix</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">nx</span><span class="p">):</span>
+    <span class="n">psi0_r</span><span class="p">[</span><span class="n">ix</span><span class="p">]</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="p">((</span><span class="n">ix</span><span class="o">*</span><span class="n">dx</span><span class="o">-</span><span class="n">x0</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">sigma2</span><span class="p">)</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">k0</span><span class="o">*</span><span class="n">ix</span><span class="o">*</span><span class="n">dx</span><span class="p">)</span>
+    <span class="n">psi0_i</span><span class="p">[</span><span class="n">ix</span><span class="p">]</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="p">((</span><span class="n">ix</span><span class="o">*</span><span class="n">dx</span><span class="o">-</span><span class="n">x0</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">sigma2</span><span class="p">)</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">k0</span><span class="o">*</span><span class="n">ix</span><span class="o">*</span><span class="n">dx</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">lx</span><span class="o">+</span><span class="n">dx</span><span class="p">,</span> <span class="n">dx</span><span class="p">)</span>
+<span class="n">V</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nx</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">ix</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nx</span><span class="o">//</span><span class="mi">2</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span><span class="n">nx</span><span class="o">//</span><span class="mi">2</span><span class="o">+</span><span class="mi">20</span><span class="p">):</span>
+    <span class="n">V</span><span class="p">[</span><span class="n">ix</span><span class="p">]</span><span class="o">=</span><span class="mf">2000.</span>
+                                               
+<span class="k">def</span><span class="w"> </span><span class="nf">solve</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">psi0_r</span><span class="p">,</span> <span class="n">psi0_i</span>
+
+    <span class="n">psi0_r</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">psi0_r</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span> <span class="n">alpha</span><span class="o">*</span><span class="p">(</span><span class="n">psi0_i</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span><span class="o">+</span><span class="n">psi0_i</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">psi0_i</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="n">dt</span><span class="o">*</span><span class="n">V</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">psi0_i</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> 
+    <span class="n">psi0_i</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">psi0_i</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span> <span class="n">alpha</span><span class="o">*</span><span class="p">(</span><span class="n">psi0_r</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span><span class="o">+</span><span class="n">psi0_r</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">psi0_r</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">-</span><span class="n">dt</span><span class="o">*</span><span class="n">V</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">psi0_r</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> 
+
+    <span class="n">points</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">psi0_r</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">psi0_i</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">points</span>
+
+
+<span class="n">anim</span> <span class="o">=</span> <span class="n">animation</span><span class="o">.</span><span class="n">FuncAnimation</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">solve</span><span class="p">,</span> <span class="n">frames</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="n">HTML</span><span class="p">(</span><span class="n">anim</span><span class="o">.</span><span class="n">to_jshtml</span><span class="p">())</span>            
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img alt="" src="posts_images/post2.gif"/></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2>The last challenge: Single-slit diffraction</h2>
+<p>Young’s single-slit experiment consists of a wave passing though a small
+slit, which causes the emerging wavelets to intefere with eachother
+forming a diffraction pattern. In quantum mechanics, where particles are
+represented by probabilities, and probabilities by wave packets, it
+means that the same phenomenon should occur when a particle (electron,
+neutron) passes though a small slit. Here, lets consider a wave packet of initial
+width 3 incident on a slit of width 5, and plot the probability density
+$|\psi ^2|$ as the packet crosses the slit, while generalizing the
+time-evolution equation for 2 dimensions. The model of the
+slit with a potential wall is so that:</p>
+<p>$$V(x,y)=100 \,\,\,\,\,\ \mathrm{for}\,\,x=10,|y|\geq 2.5.$$</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">pyplot</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="n">lx</span>      <span class="o">=</span> <span class="mi">20</span>                            <span class="c1">#Box length in x</span>
+<span class="n">ly</span>      <span class="o">=</span> <span class="mi">20</span>                            <span class="c1">#Box length in y</span>
+<span class="n">dx</span>      <span class="o">=</span> <span class="mf">0.25</span>                          <span class="c1">#Incremental step size in x (Increased this to decrease the time of the sim)</span>
+<span class="n">dy</span>      <span class="o">=</span> <span class="n">dx</span>                            <span class="c1">#Incremental step size in y</span>
+<span class="n">nx</span>      <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">lx</span><span class="o">/</span><span class="n">dx</span><span class="p">)</span>                    <span class="c1">#Number of steps in x</span>
+<span class="n">ny</span>      <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ly</span><span class="o">/</span><span class="n">dy</span><span class="p">)</span>                    <span class="c1">#Number of steps in y</span>
+<span class="n">dt</span>      <span class="o">=</span> <span class="n">dx</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mf">20.</span>                     <span class="c1">#Incremental step size in time</span>
+<span class="n">sigma2</span>  <span class="o">=</span> <span class="mf">0.5</span><span class="o">**</span><span class="mi">2</span>                        <span class="c1">#Sigma2 Value</span>
+<span class="n">k0</span>      <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mf">10.5</span>                    <span class="c1">#K0 value</span>
+<span class="n">amp</span>     <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="mf">2.</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>           <span class="c1">#Amplitude (to avoid large values out of range. This was one issue)</span>
+
+<span class="n">alpha</span>   <span class="o">=</span> <span class="p">(</span><span class="n">dt</span><span class="o">/</span><span class="mf">2.</span><span class="p">)</span><span class="o">/</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span>                 <span class="c1">#Alpha</span>
+
+<span class="n">psi0_r</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">ny</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">nx</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>   <span class="c1">#Initialize real part of psi</span>
+<span class="n">psi0_i</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">ny</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">nx</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>   <span class="c1">#Initialize imaginary part of psi</span>
+<span class="n">V</span>       <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">ny</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">nx</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>   <span class="c1">#Initialize Potential</span>
+
+<span class="c1">#Define your potential wall</span>
+<span class="n">V</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">ny</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">nx</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">ix</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nx</span><span class="o">//</span><span class="mi">2</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span><span class="n">nx</span><span class="o">//</span><span class="mi">2</span><span class="o">+</span><span class="mi">20</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">iy</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">ny</span><span class="p">):</span>
+        <span class="k">if</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">iy</span><span class="o">*</span><span class="n">dy</span><span class="o">-</span><span class="n">ly</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">&gt;</span><span class="mf">2.5</span><span class="p">):</span>
+            <span class="n">V</span><span class="p">[</span><span class="n">iy</span><span class="p">,</span><span class="n">ix</span><span class="p">]</span> <span class="o">=</span> <span class="mf">200.</span>
+
+<span class="c1">#Initial conditions: wave packet</span>
+<span class="n">x0</span> <span class="o">=</span> <span class="mf">6.</span>
+<span class="n">y0</span> <span class="o">=</span> <span class="n">ly</span><span class="o">/</span><span class="mf">2.</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">nx</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">ny</span><span class="p">):</span>
+        <span class="n">psi0_r</span><span class="p">[</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="p">((</span><span class="n">x</span><span class="o">*</span><span class="n">dx</span><span class="o">-</span><span class="n">x0</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">y</span><span class="o">*</span><span class="n">dy</span><span class="o">-</span><span class="n">y0</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">sigma2</span><span class="p">)</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">k0</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">dx</span><span class="p">)</span>
+        <span class="n">psi0_i</span><span class="p">[</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="p">((</span><span class="n">x</span><span class="o">*</span><span class="n">dx</span><span class="o">-</span><span class="n">x0</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">y</span><span class="o">*</span><span class="n">dy</span><span class="o">-</span><span class="n">y0</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">sigma2</span><span class="p">)</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">k0</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">dx</span><span class="p">)</span>
+                
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">lx</span><span class="o">+</span><span class="n">dx</span><span class="p">,</span> <span class="n">dx</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ly</span><span class="o">+</span><span class="n">dy</span><span class="p">,</span> <span class="n">dy</span><span class="p">)</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="n">pyplot</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">psi0_r</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">psi0_i</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">V</span><span class="p">)</span>
+
+
+<span class="c1">#Function to solve incremental changes in psi</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">solve</span><span class="p">():</span>
+    <span class="c1">#Grab psi lists</span>
+    <span class="k">global</span> <span class="n">psi0_r</span><span class="p">,</span> <span class="n">psi0_i</span>
+
+    <span class="c1">#Calculate Imaginary Part in all points except for last 2 (because of indice notation)</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">nx</span><span class="o">-</span><span class="mi">2</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">ny</span><span class="o">-</span><span class="mi">2</span><span class="p">):</span>
+            <span class="n">psi0_i</span><span class="p">[</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">psi0_i</span><span class="p">[</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">]</span> <span class="o">+</span> <span class="n">alpha</span><span class="o">*</span><span class="n">psi0_r</span><span class="p">[</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">alpha</span><span class="o">*</span><span class="n">psi0_r</span><span class="p">[</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">alpha</span> <span class="o">+</span> <span class="n">dt</span><span class="o">*</span><span class="n">V</span><span class="p">[</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">])</span><span class="o">*</span><span class="n">psi0_r</span><span class="p">[</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">]</span> <span class="o">+</span> <span class="n">alpha</span><span class="o">*</span><span class="n">psi0_r</span><span class="p">[</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="p">]</span> <span class="o">+</span> <span class="n">alpha</span><span class="o">*</span><span class="n">psi0_r</span><span class="p">[</span><span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="p">]</span> <span class="o">-</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">alpha</span><span class="o">+</span><span class="n">dt</span><span class="o">*</span><span class="n">V</span><span class="p">[</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">])</span><span class="o">*</span><span class="n">psi0_r</span><span class="p">[</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">]</span>
+
+    <span class="c1">#Calculate Real Part in all points except for last 2 (because of indice notation)</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">nx</span><span class="o">-</span><span class="mi">2</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">ny</span><span class="o">-</span><span class="mi">2</span><span class="p">):</span>
+            <span class="n">psi0_r</span><span class="p">[</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">psi0_r</span><span class="p">[</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">]</span> <span class="o">-</span> <span class="n">alpha</span><span class="o">*</span><span class="n">psi0_i</span><span class="p">[</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">alpha</span><span class="o">*</span><span class="n">psi0_i</span><span class="p">[</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">alpha</span> <span class="o">+</span> <span class="n">dt</span><span class="o">*</span><span class="n">V</span><span class="p">[</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">])</span><span class="o">*</span><span class="n">psi0_i</span><span class="p">[</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">]</span> <span class="o">-</span> <span class="n">alpha</span><span class="o">*</span><span class="n">psi0_i</span><span class="p">[</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="p">]</span> <span class="o">-</span> <span class="n">alpha</span><span class="o">*</span><span class="n">psi0_i</span><span class="p">[</span><span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">alpha</span><span class="o">+</span><span class="n">dt</span><span class="o">*</span><span class="n">V</span><span class="p">[</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">])</span><span class="o">*</span><span class="n">psi0_i</span><span class="p">[</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">]</span>
+
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+    <span class="n">solve</span><span class="p">()</span>
+    
+<span class="n">pyplot</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">psi0_r</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">psi0_i</span><span class="o">**</span><span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_png output_subarea">
+<img alt="No description has been provided for this image" src="data:image/png;base64,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
+"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+      </div>
+      <footer class="post__footer">
+        <a class="btn btn--ghost" href="/blog/">← Back to all posts</a>
+      </footer>
+    </article>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__sig"><span class="prompt">$</span> echo "designed &amp; engineered by Ruben Esteche"</p>
+      <ul class="footer__links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="https://github.com/REsteche" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/rubenesteche/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
